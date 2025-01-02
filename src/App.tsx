@@ -12,6 +12,8 @@ import { Dashboard } from "./pages/Dashboard";
 import { InterviewManagement } from "./pages/interviews/InterviewManagement";
 import CoursesPage from "./pages/courses/Courses";
 import AssignmentManagement from "./pages/assignment/AssignmentMangement";
+import TestManagement from './pages/testsmanager/TestManagement';
+
 
 function App() {
   return (
@@ -58,6 +60,14 @@ function App() {
                 </Layout>
               </ProtectedRoute>
             }
+          />
+          <Route path="/tests" element={
+            <ProtectedRoute>
+              <Layout>
+                <TestManagement/>
+              </Layout>
+            </ProtectedRoute>
+          }
           />
           <Route path="/" element={<Navigate to="/dashboard" replace />} />
         </Routes>
