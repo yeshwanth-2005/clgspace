@@ -1,6 +1,6 @@
 import { useAuth } from '../contexts/AuthContext';
 import { useNavigate, Link, useLocation } from 'react-router-dom';
-import { School, Users, BookOpen, Calendar, Settings, LogOut, Briefcase,Clipboard,FileText, Heart } from 'lucide-react';
+import { School, Users, BookOpen, Settings, LogOut, Briefcase,Clipboard,FileText } from 'lucide-react';
 
 export function Layout({ children }: { children: React.ReactNode }) {
   const { logout } = useAuth();
@@ -19,7 +19,6 @@ export function Layout({ children }: { children: React.ReactNode }) {
     { name: 'Interviews', href: '/interviews', icon: Briefcase },
     { name : 'Assignments',href: '/assignments',icon: FileText },
     {name : 'Tests',href:'/tests',icon: Clipboard},
-    { name: 'Calendar', href: '/calendar', icon: Calendar },
     { name: 'Settings', href: '/settings', icon: Settings },
   ];
 
