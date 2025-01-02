@@ -13,7 +13,7 @@ import { InterviewManagement } from "./pages/interviews/InterviewManagement";
 import CoursesPage from "./pages/courses/Courses";
 import AssignmentManagement from "./pages/assignment/AssignmentMangement";
 import TestManagement from './pages/testsmanager/TestManagement';
-
+import { StudentDashboard } from "./pages/students/studentDashboard";
 
 function App() {
   return (
@@ -27,6 +27,16 @@ function App() {
               <ProtectedRoute>
                 <Layout>
                   <Dashboard />
+                </Layout>
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/students"
+            element={
+              <ProtectedRoute>
+                <Layout>
+                  <StudentDashboard />
                 </Layout>
               </ProtectedRoute>
             }
